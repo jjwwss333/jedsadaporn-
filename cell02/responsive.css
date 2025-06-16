@@ -1,0 +1,13 @@
+table {
+  width: 100%;             
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+td {
+  border: 1px solid #333;
+  padding: 1rem;
+  text-align: center;
+}
+.cell1 { background-color: #c4ca7a; }
+.cell2 { background-color: #f5c3af; }
