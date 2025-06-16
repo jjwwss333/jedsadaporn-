@@ -1,32 +1,36 @@
-<!DOCTYPE html >
-<html lang+"en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Piscine Web </title>
-        <style> 
-        h1{text-align: center;
-        font-size: 3rem;
-        margin-top: 2rem;}
-            .images {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-           .images img {
-        max-width: 300px;
-        height: auto;
-        border-radius: 0.5rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Piscine Web</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;       /* จัดทุกอย่างให้อยู่ตรงกลาง */
     }
-        </style>
-    </head>
-    <body>
-        <h1>Piscine Web</h1>
-    </body>
-      <h1>Piscine Web</h1>
+    h1 {
+      font-size: 3rem;          /* ขนาดหัวเรื่องใหญ่ */
+      margin-top: 2rem;
+    }
+    .images {
+      display: flex;            /* วางรูปเป็นแถว */
+      justify-content: center;  /* จัดให้อยู่ตรงกลางแนวนอน */
+      gap: 1rem;                /* เว้นระยะห่างระหว่างรูป */
+      margin-top: 2rem;
+    }
+    .images img {
+      max-width: 300px;         /* ปรับขนาดรูปไม่ให้ใหญ่เกิน */
+      height: auto;
+      border-radius: 0.5rem;    /* เล็กน้อยให้มุมโค้ง */
+    }
+  </style>
+</head>
+<body>
+  <h1>Piscine Web</h1>
 
   <div class="images">
-    <img src="img/ex02_1.jpg" alt="Lolcat 1">
-    <img src="img/ex02_2.jpg" alt="Lolcat 2">
+    <img src="img/lolcat1.jpg" alt="Lolcat 1">
+    <img src="img/lolcat2.jpg" alt="Lolcat 2">
   </div>
 </body>
-    </html>
+</html>
