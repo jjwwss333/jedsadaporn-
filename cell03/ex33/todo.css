@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+}
+#new {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+#ft_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ft_list {
+  padding: 0.5rem 1rem;
+  background: #eef;
+  border: 1px solid #99c;
+  cursor: pointer;
+}
