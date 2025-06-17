@@ -1,0 +1,39 @@
+/* 1. ตั้งพื้นหลังเป็น GIF แบบ cover */
+body {
+  /* โหลด bg.gif จากโฟลเดอร์ img */
+  background: url("https://i.pinimg.com/originals/0d/35/18/0d3518249292b600f59bf6f0864810b8.gif") no-repeat center center fixed;
+  background-size: cover;       /* ให้เต็มพื้นที่ viewport */
+  
+  /* 2. เปลี่ยนฟอนต์และสีฟอนต์เป็นสีขาว */
+  font-family: 'Roboto', sans-serif; /* หรือฟอนต์ที่คุณเลือก */
+  color: #fff;                    /* ข้อความทั้งหมดใน body จะเป็นขาว */
+
+  .main-title {
+  font-size: 3rem;      /* ปรับค่าตามต้องการ เช่น 3rem, 4rem, 5rem */
+  font-weight: bold;    /* ถ้าต้องการหนาขึ้นอีก */
+
+
+    /* 3. ถ้าต้องการให้ overlay ดำโปร่งเล็กน้อย (ช่วยให้ตัวหนังสืออ่านง่าย) */
+    position: relative;
+}
+
+.navbar {
+  /* ให้สีขาวโปร่งแสง 70% */
+  background-color: rgba(255, 255, 255, 0.7) !important;
+
+  /* ซัพพอร์ตเบลอสำหรับเบราว์เซอร์หลายตัว */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  /* ให้ navbar ทับเนื้อหาได้ */
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* อยู่เหนือเนื้อหา */
+  }
+
+/* 4. ให้ทุกคอนเทนต์อยู่เหนือ overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+
+}
