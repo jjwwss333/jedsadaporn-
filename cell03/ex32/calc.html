@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>It's over 9000!</title>
+  <style>
+    
+* { box-sizing: border-box; margin:0; padding:0; }
+html, body { height:100%; }
+body {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f5f5f5;
+  font-family:sans-serif;
+}
+
+
+#calcForm {
+  background:#fff;
+  padding:2rem;
+  border:1px solid #ccc;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  display:flex;
+  gap:0.5rem;
+  flex-wrap:wrap;
+  max-width:90vw;
+}
+
+
+#calcForm input[type="number"],
+#calcForm select {
+  width:4rem;
+  padding:0.5rem;
+  font-size:1rem;
+  text-align:center;
+}
+#calcForm input[type="submit"] {
+  padding:0.5rem 1rem;
+  cursor:pointer;
+  background:#007bff;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  transition:background 0.2s;
+}
+#calcForm input[type="submit"]:hover {
+  background:#0056b3;
+}
+
+  </style>
+</head>
+<body>
+
+  <form id="calcForm">
+    
+    <input id="left" type="number" min="0" step="1" placeholder="Left operand" required>
+   
+    <select id="op">
+      <option value="+">+</option>
+      <option value="-">−</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+   
+    <input id="right" type="number" min="0" step="1" placeholder="Right operand" required>
+    
+    <input type="submit" value="Try me!">
+  </form>
+
+  <script>
+   
+const form = document.getElementById('calcForm');
+const inpL = document.getElementById('left');
+const inpR = document.getElementById('right');
+const selOp = document.getElementById('op');
+
+
+setInterval(() => {
+  alert('Please, use me...');
+}, 30000);
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+ 
+  const a = parseInt(inpL.value, 10);
+  const b = parseInt(inpR.value, 10);
+  const op = selOp.value;
+
+
+  if (isNaN(a) || isNaN(b) || a < 0 || b < 0) {
+    alert('Error !');
+    return;
+  }
+
+
+  if ((op === '/' || op === '%') && b === 0) {
+    alert("It's over 9000!");
+    console.log("It's over 9000!");
+    return;
+  }
+
+ 
+  let result;
+  switch (op) {
+    case '+': result = a + b; break;
+    case '−': result = a - b; break;
+    case '*': result = a * b; break;
+    case '/': result = a / b; break;
+    case '%': result = a % b; break;
+  }
+
+
+  alert(result);
+  console.log(result);
+});
+
+  </script>
+</body>
+</html>
