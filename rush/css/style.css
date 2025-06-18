@@ -39,15 +39,57 @@ body {
 /* 5. navbar และ backdrop blur */
 .navbar {
   background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1020;
 }
 
-/* 6. content ทั้งหมดให้มาอยู่เหนือ overlay */
-body > * {
+/* background & overlay เฉพาะคอลัมน์จัดทำโดย */
+.border-start {
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
+.border-start::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('../img/footer-bg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+.border-start::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(19, 0, 71, 0.284)
+}
+/* ให้เนื้อหาอยู่เหนือ overlay */
+.border-start > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer Section */
+footer a:hover {
+  color: #ffc107;   /* ส้มอ่อนเวลาลากเมาส์ */
+}
+.custom-footer {
+  background-color: #6b98c6;  /* ใส่โค้ดสีที่ต้องการ */
+}
+footer h6 {
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  footer .row > [class*="col-"] {
+    text-align: middle; /* จัดกึ่งกลางในมือถือ */
+  }
+}
+
+
+
+
+
