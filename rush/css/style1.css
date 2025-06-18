@@ -4,21 +4,26 @@ body {
     no-repeat center center fixed;
   background-size: cover;
 
+  /* หัวเรื่อง ใช้ Kanit */
+.main-title {
+  font-family: 'roboto', sans-serif;
+  font-size: 3rem;       /* ปรับขนาดตามชอบ */
+  font-weight: 700;
+  color: aliceblue;
+}
     
-  /* 2. เปลี่ยนฟอนต์และสีฟอนต์เป็นสีขาว */
+  .main-desc {
   font-family: 'kanit', sans-serif;
-  color: #fff;
-
-    .hero {
-  background: url('https://cdn.discordapp.com/attachments/956936400450764840/1384825593123836096/Asset_2.png?ex=6853d6d6&is=68528556&hm=a7d1527f8552dbdd3a1ba2bc69bafa52c0f0823feb751dbbb263582303a2c177&') center/cover no-repeat;
-  position: relative;
-  height: 60vh;
-}
-.text-orange {
-  color: #E95420 !important;
+  font-size: 1rem;     /* ปรับขนาดตามชอบ */
+  font-weight: 300;
+  color: aliceblue;
 }
 
-
+  .hero {
+    background: url('https://cdn.discordapp.com/attachments/956936400450764840/1384825593123836096/Asset_2.png?ex=6853d6d6&is=68528556&hm=a7d1527f8552dbdd3a1ba2bc69bafa52c0f0823feb751dbbb263582303a2c177&') center/cover no-repeat;
+    position: relative;
+    height: 60vh;
+  }
 }
 
 /* 3. .hero ต้องอยู่ข้างนอก ไม่ใช่ซ้อนใน body */
