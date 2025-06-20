@@ -4,17 +4,17 @@ body {
     no-repeat center center fixed;
   background-size: cover;
 
-  /* หัวเรื่อง ใช้ Kanit */
+ 
 .main-title {
   font-family: 'roboto', sans-serif;
-  font-size: 3rem;       /* ปรับขนาดตามชอบ */
+  font-size: 3rem;  
   font-weight: 700;
   color: aliceblue;
 }
     
   .main-desc {
   font-family: 'kanit', sans-serif;
-  font-size: 1rem;     /* ปรับขนาดตามชอบ */
+  font-size: 1rem; 
   font-weight: 300;
   color: aliceblue;
 }
@@ -24,9 +24,14 @@ body {
     position: relative;
     height: 60vh;
   }
+  p {
+    font-family: 'roboto', sans-serif;
+ 
+  color: rgb(94, 255, 132);
+ } 
 }
 
-/* 3. .hero ต้องอยู่ข้างนอก ไม่ใช่ซ้อนใน body */
+
 .hero {
   background: url('https://cdn.discordapp.com/attachments/956936400450764840/1384825593123836096/Asset_2.png')
     center/cover no-repeat;
@@ -34,38 +39,31 @@ body {
   height: 60vh;
 }
 
-}
 .custom-footer {
-  background-color: #6b98c6;  /* ใส่โค้ดสีที่ต้องการ */
+  background-color: #002c58;
 }
-/* 4. main-title ก็เช่นกัน */
+
 .main-title {
   font-size: 3rem;
   font-weight: bold;
-  position: relative; /* ใส่ไว้ถ้าจะใช้ overlay */
-}
+  position: relative;
 
-/* 5. navbar และ backdrop blur */
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
-  z-index: 1020;
 }
 
-/* 6. content ทั้งหมดให้มาอยู่เหนือ overlay */
-body > * {
-  position: relative;
-  z-index: 1;
-}
-/* Footer Section */
+
+
 footer a:hover {
-  color: #ffc107;   /* ส้มอ่อนเวลาลากเมาส์ */
+  color: #ffc107;
 }
 .custom-footer {
-  background-color: #1A182B;  /* ใส่โค้ดสีที่ต้องการ */
+  background-color: #1A182B; 
 }
 footer h6 {
   margin-bottom: 0.75rem;
@@ -73,6 +71,5 @@ footer h6 {
 
 @media (max-width: 767px) {
   footer .row > [class*="col-"] {
-    text-align: middle; /* จัดกึ่งกลางในมือถือ */
+    text-align: middle;
   }
-}
