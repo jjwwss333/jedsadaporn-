@@ -17,7 +17,12 @@ body {
 .text-orange {
   color: #E95420 !important;
 }
-
+/* 4. main-title ก็เช่นกัน */
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative; /* ใส่ไว้ถ้าจะใช้ overlay */
+}
 
 }
 
@@ -29,16 +34,10 @@ body {
   height: 60vh;
 }
 
-/* 4. main-title ก็เช่นกัน */
-.main-title {
-  font-size: 3rem;
-  font-weight: bold;
-  position: relative; /* ใส่ไว้ถ้าจะใช้ overlay */
-}
 
 /* 5. navbar และ backdrop blur */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: sticky;
